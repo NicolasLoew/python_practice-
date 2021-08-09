@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<!-- Created following the guide of https://realpython.com/brython-python-in-browser/#cdn-installation -->
+    <head>
+<!-- loads brython.js from CDNJS -->
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.js">
+        </script>
+    </head>
+<!-- execute brython() when the document has finished loading. brython() reads the Python code in the current scope and compiles it to JavaScript.  -->
+    <body onload="brython()">
+<!--  set the type of the script to text/python. This indicates to Brython which code needs to be compiled and executed. After that imports "browser", a Brython module that exposes objects and functions allowing interaction with the browser. Then calls alert(), which displays a message box with the text "Hello Real Python!"-->
+        <script type="text/python">
+            import browser
+            browser.alert("Hello Real Python!")
+        </script>
+    </body>
+</html>
